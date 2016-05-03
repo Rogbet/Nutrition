@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NutritionApp.Models;
 using NutritionApp.Services;
+using Microsoft.AspNet.Authorization;
+using Microsoft.AspNet.Mvc.Filters;
 
 namespace NutritionApp
 {
@@ -54,7 +56,16 @@ namespace NutritionApp
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc();
+            // only allow authenticated users
+            var defaultPolicy = new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
+                .Build();
+
+            services.AddMvc(setup =>
+            {
+                setup.Filters.Add(new AuthorizeFilter(defaultPolicy));
+            });
+            //services.AddMvc();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -68,6 +79,7 @@ namespace NutritionApp
             loggerFactory.AddDebug();
 
             app.UseApplicationInsightsRequestTelemetry();
+            
 
             if (env.IsDevelopment())
             {
