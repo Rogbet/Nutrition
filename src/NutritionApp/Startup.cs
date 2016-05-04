@@ -13,6 +13,7 @@ using NutritionApp.Models;
 using NutritionApp.Services;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc.Filters;
+using Newtonsoft.Json.Serialization;
 
 namespace NutritionApp
 {
@@ -64,9 +65,15 @@ namespace NutritionApp
             services.AddMvc(setup =>
             {
                 setup.Filters.Add(new AuthorizeFilter(defaultPolicy));
+            }).AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
+
             //services.AddMvc();
 
+            //services.AddSingleton
+            
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
@@ -120,6 +127,8 @@ namespace NutritionApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SeedData.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.
