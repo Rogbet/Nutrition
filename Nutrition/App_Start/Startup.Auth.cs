@@ -3,9 +3,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using Nutrition.Models;
+using Nutrition.ViewModels;
 
 namespace Nutrition
 {
@@ -54,9 +53,9 @@ namespace Nutrition
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1413905271969731",
+               appSecret: "69bab5187a7d5736ee81ca87b394af7d");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
