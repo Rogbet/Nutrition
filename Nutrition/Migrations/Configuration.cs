@@ -22,6 +22,9 @@ namespace Nutrition.Migrations
             var user = new ApplicationUser()
             {
                 UserName = "roge.villafu@gmail.com",
+                Email = "roge.villafu@gmail.com",
+                FirstName ="Rogelio",
+                LastName = "Villafuerte"
             };
 
             ir = um.Create(user, "secret123");

@@ -23,6 +23,14 @@ namespace Nutrition
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular.min.js",
+                      "~/Scripts/angular-ui-router.min.js",
+                      "~/Scripts/app/app.js",
+                      "~/Scripts/app/config.js",
+                      "~/Scripts/app/route-config.js",
+                      "~/Scripts/app/patient/patient.controller.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       //"~/Content/bootstrap.css",
                       "~/Content/themes/bootstrap.spacelab.min.css",
