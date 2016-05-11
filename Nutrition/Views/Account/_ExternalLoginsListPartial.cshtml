@@ -1,6 +1,5 @@
 ﻿@model Nutrition.ViewModels.ExternalLoginListViewModel
 @using Microsoft.Owin.Security
-<br />
 @{
     var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
     if (loginProviders.Count() == 0) {
@@ -14,12 +13,14 @@
     else {
         using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl })) {
             @Html.AntiForgeryToken()
+            <h2 class="form-login-heading">Social Logins</h2>
+            <p>Or you can login using one of the social logins below</p>
             <div id="socialLoginList">
                 <p>
                     @foreach (AuthenticationDescription p in loginProviders)
                     {
-                        <button type="submit" class="btn btn-default btn-social btn-@p.AuthenticationType.ToLower()" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
-                            <i class="fa fa-@p.AuthenticationType.ToLower()"></i>Sign in with @p.AuthenticationType
+                        <button type="submit" class="btn btn-primary btn-lg btn-block btn-social btn-@p.AuthenticationType.ToLower()" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
+                            <i class="fa fa-3x fa-@p.AuthenticationType.ToLower()"></i>Sign in with @p.AuthenticationType
                         </button>
                     }
                 </p>

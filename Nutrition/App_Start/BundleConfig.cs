@@ -24,7 +24,8 @@ namespace Nutrition
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      //"~/Content/bootstrap.css",
+                      "~/Content/themes/bootstrap.spacelab.min.css",
                       "~/Content/bootstrap-social.css",
                       "~/Content/css/font-awesome.css",
                       "~/Content/site.css"));
