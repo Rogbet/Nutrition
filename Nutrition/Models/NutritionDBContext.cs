@@ -21,6 +21,6 @@ namespace Nutrition.Models
         }
 
         DbSet<Patient> Patients { get; set; }
-        DbSet<Contact> Contacts { get; set; }
+        DbSet<PatientImage> PatientsImage { get; set; }
     }
 }

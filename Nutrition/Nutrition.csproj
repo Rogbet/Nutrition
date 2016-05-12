@@ -221,8 +221,19 @@
       <DependentUpon>201605110506466_InitialUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Enums\EnumBloodType.cs" />
+    <Compile Include="Models\ClinicHistory.cs" />
+    <Compile Include="Models\Enums\EnumFoodGroup.cs" />
+    <Compile Include="Models\Enums\EnumGender.cs" />
+    <Compile Include="Models\Enums\EnumToxicActivityFrecuency.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Interfaces\IImage.cs" />
+    <Compile Include="Models\LifeStyle.cs" />
+    <Compile Include="Models\Pathology.cs" />
+    <Compile Include="Models\PatientImage.cs" />
+    <Compile Include="Models\PatientMeasurement.cs" />
+    <Compile Include="Models\ToxicActivity.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
-    <Compile Include="Models\Contact.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Models\NutritionDBContext.cs" />
