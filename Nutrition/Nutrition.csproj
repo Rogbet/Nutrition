@@ -212,13 +212,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605042306184_Initial.cs" />
-    <Compile Include="Migrations\201605042306184_Initial.Designer.cs">
-      <DependentUpon>201605042306184_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605110506466_InitialUser.cs" />
-    <Compile Include="Migrations\201605110506466_InitialUser.Designer.cs">
-      <DependentUpon>201605110506466_InitialUser.cs</DependentUpon>
+    <Compile Include="Migrations\201605140041360_initial.cs" />
+    <Compile Include="Migrations\201605140041360_initial.Designer.cs">
+      <DependentUpon>201605140041360_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enums\EnumBloodType.cs" />
@@ -230,7 +226,7 @@
     <Compile Include="Models\Interfaces\IImage.cs" />
     <Compile Include="Models\LifeStyle.cs" />
     <Compile Include="Models\Pathology.cs" />
-    <Compile Include="Models\PatientImage.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\PatientMeasurement.cs" />
     <Compile Include="Models\ToxicActivity.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -1112,11 +1108,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605042306184_Initial.resx">
-      <DependentUpon>201605042306184_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605110506466_InitialUser.resx">
-      <DependentUpon>201605110506466_InitialUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605140041360_initial.resx">
+      <DependentUpon>201605140041360_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

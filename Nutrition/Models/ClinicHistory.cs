@@ -11,7 +11,7 @@ namespace Nutrition.Models
         public int ClinicHistoryID { get; set; }
         public string ReasonOfVisit { get; set; }
         public string OtherPathologies { get; set; }
-        public List<Pathology> CommonPathologies { get; set; }
+        public virtual ICollection<Pathology> CommonPathologies { get; set; }
         public string SurgeriesPerformed { get; set; }
         public string Allergies { get; set; }
         public string FamilyBackground { get; set; }

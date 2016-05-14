@@ -21,6 +21,12 @@ namespace Nutrition.Models
         }
 
         DbSet<Patient> Patients { get; set; }
-        DbSet<PatientImage> PatientsImage { get; set; }
+        DbSet<Image> PatientsImage { get; set; }
+        DbSet<PatientMeasurement> PatientMeasurements { get; set; }
+        DbSet<ClinicHistory> ClinicHistories { get; set; }
+        DbSet<LifeStyle> LifeStyles { get; set; }
+        DbSet<Pathology> ClinicHiPathologies { get; set; }
+        DbSet<ToxicActivity> ToxicActivities { get; set; }
+        DbSet<Food> Foods { get; set; }
     }
 }

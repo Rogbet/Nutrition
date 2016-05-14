@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Nutrition.Models.Enums;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Nutrition.Models
 {
@@ -15,8 +16,15 @@ namespace Nutrition.Models
         public Boolean IsVegan { get; set; }
         public string SportActivity { get; set; }
 
-        public ToxicActivity CigarActivity { get; set; }
-        public ToxicActivity AlcoholActivity { get; set; }
-        public ToxicActivity DrugActivity { get; set; }
+        public int CigarActivityID { get; set; }
+        public int AlcoholActivityID { get; set; }
+        public int DrugActivityID { get; set; }
+
+        [ForeignKey("CigarActivityID")]
+        public virtual ToxicActivity CigarActivity { get; set; }
+        [ForeignKey("AlcoholActivityID")]
+        public virtual ToxicActivity AlcoholActivity { get; set; }
+        [ForeignKey("DrugActivityID")]
+        public virtual ToxicActivity DrugActivity { get; set; }
     }
 }

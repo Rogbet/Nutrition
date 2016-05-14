@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Nutrition.Models
 {
     public class PatientMeasurement
@@ -25,5 +26,9 @@ namespace Nutrition.Models
         public int Wrist { get; set; }
         public int Waist { get; set; }
         public int Hip { get; set; }
+        
+        public int PatientID { get; set; }
+        [ForeignKey("PatientID")]
+        public virtual Patient Patient { get; set; }
     }
 }

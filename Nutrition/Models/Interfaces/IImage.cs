@@ -8,7 +8,7 @@ namespace Nutrition.Models.Interfaces
 {
     interface IImage
     {
-        int Id { get; set; }
+        int ID { get; set; }
         byte[] Image { get; set; }
     }
 }
