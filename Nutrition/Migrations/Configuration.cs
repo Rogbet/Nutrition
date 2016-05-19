@@ -10,8 +10,8 @@ namespace Nutrition.Migrations
         {
             AutomaticMigrationsEnabled = false;
         }
-
-        bool AddUserAndRole(Nutrition.Models.NutritionDBContext context)
+        
+        bool AddUserAndRole(Models.NutritionDBContext context)
         {
             IdentityResult ir;
             var rm = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));

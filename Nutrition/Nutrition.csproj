@@ -216,6 +216,10 @@
     <Compile Include="Migrations\201605140041360_initial.Designer.cs">
       <DependentUpon>201605140041360_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605192122177_AddingNulls.cs" />
+    <Compile Include="Migrations\201605192122177_AddingNulls.Designer.cs">
+      <DependentUpon>201605192122177_AddingNulls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enums\EnumBloodType.cs" />
     <Compile Include="Models\ClinicHistory.cs" />
@@ -1110,6 +1114,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201605140041360_initial.resx">
       <DependentUpon>201605140041360_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605192122177_AddingNulls.resx">
+      <DependentUpon>201605192122177_AddingNulls.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
