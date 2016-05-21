@@ -39,3 +39,62 @@ textarea {
 .text-muted {
     margin: 20px 0;
 }
+
+.shortcut-button {
+  padding: 0 1rem;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px #d9d9d9 solid;
+  color: #262626;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  line-height: 100%;
+  margin: .15625rem 0;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  font-size: 14px;
+
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-shadow: 3px 3px 5px #CCC;
+}
+
+.shortcut-button:hover {
+  border-color: #787878;
+  text-decoration:none;
+  
+}
+.shortcut-button:active, .shortcut-button.active {
+  background: #eeeeee;
+  color: #262626;
+  box-shadow: none;
+}
+.shortcut-button:focus {
+  outline: 0;
+}
+
+.shortcut-button .icon,
+.shortcut-button .title {
+  display: block;
+  color: inherit;
+}
+
+.shortcut-button .icon {
+  font-size: 60px;
+  margin: 8.75px auto;
+}
+.shortcut-button .badge {
+  color: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: .7rem;
+  line-height: 1rem;
+  padding: 0 .225rem;
+}
+
+a.shortcut-button {
+  padding-top: 10px;
+}
