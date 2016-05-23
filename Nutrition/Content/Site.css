@@ -52,7 +52,7 @@ textarea {
   line-height: 100%;
   margin: .15625rem 0;
   position: relative;
-  width: 120px;
+  width: 150px;
   height: 120px;
   text-align: center;
   font-size: 14px;
@@ -62,9 +62,10 @@ textarea {
 }
 
 .shortcut-button:hover {
-  border-color: #787878;
+  /*border-color: #787878;*/
+  border-color: #3399f3;
+  border-width: .15em;
   text-decoration:none;
-  
 }
 .shortcut-button:active, .shortcut-button.active {
   background: #eeeeee;

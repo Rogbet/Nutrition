@@ -27,10 +27,17 @@ namespace Nutrition.Models
         public string CellPhone { get; set; }
         public string Notes { get; set; }
 
-        public int ImageID { get; set; }
+        public int? ImageID { get; set; }
         [ForeignKey("ImageID")]
         public virtual Image Image { get; set; }
         public virtual ICollection<PatientMeasurement> Measurements { get; set; }
+
+        public string CreatedByUserID { get; set; }
+        [ForeignKey("CreatedByUserID")]
+        public virtual ApplicationUser CreatedBy { get; set; }
+
+        public string UserID { get; set; }
+        [ForeignKey("UserID")]
         public virtual ApplicationUser User { get; set; }
     }
 }

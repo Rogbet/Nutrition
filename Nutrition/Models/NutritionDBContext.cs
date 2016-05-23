@@ -20,13 +20,13 @@ namespace Nutrition.Models
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        DbSet<Patient> Patients { get; set; }
-        DbSet<Image> PatientsImage { get; set; }
-        DbSet<PatientMeasurement> PatientMeasurements { get; set; }
-        DbSet<ClinicHistory> ClinicHistories { get; set; }
-        DbSet<LifeStyle> LifeStyles { get; set; }
-        DbSet<Pathology> ClinicHiPathologies { get; set; }
-        DbSet<ToxicActivity> ToxicActivities { get; set; }
-        DbSet<Food> Foods { get; set; }
+        public DbSet<Patient> Patients { get; set; }
+        public DbSet<Image> PatientsImage { get; set; }
+        public DbSet<PatientMeasurement> PatientMeasurements { get; set; }
+        public DbSet<ClinicHistory> ClinicHistories { get; set; }
+        public DbSet<LifeStyle> LifeStyles { get; set; }
+        public DbSet<Pathology> ClinicHiPathologies { get; set; }
+        public DbSet<ToxicActivity> ToxicActivities { get; set; }
+        public DbSet<Food> Foods { get; set; }
     }
 }

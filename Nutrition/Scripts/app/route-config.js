@@ -1,16 +1,4 @@
-﻿//angular.module('app')
-//    .config(['$routeProvider', config]);
-
-//function config($routeProvider) {
-//    $routeProvider
-//        .when('/', {
-//            templateUrl: 'patientlist.html',
-//            controller: 'PatientController',
-//            controllerAs: 'vm'
-//        });
-//}
-
-angular.module('app')
+﻿angular.module('app')
     .config(function ($stateProvider, $urlRouterProvider) {
         //
         // For any unmatched url, redirect to /state1
@@ -29,10 +17,12 @@ angular.module('app')
             controllerAs: 'vm'
         })
         .state('patient', {
-            url: "/patient/{id}",
+            url: "/patient/:id",
             templateUrl: "/scripts/app/patient/index.html",
-            controller: 'PatientController',
-            controllerAs: 'vm'
+            controller: function ($scope, $stateParams) {
+                $scope.id = $stateParams.id;
+            }
+            //controllerAs: 'vm',
         })
         .state('patientlist', {
             url: "/patients",
