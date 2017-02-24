@@ -13,7 +13,7 @@ angular.module('app', [
   'app.core',
   'app.landing',
   'app.layout',
-  //'app.waitList'
+  'app.patient'
 ])
 .config(configFunction)
 .run(runFunction);

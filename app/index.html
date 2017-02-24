@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css">
   <!--Bootstrap latest compiled and minified CSS-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!--Optional theme-->
@@ -31,6 +32,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
@@ -70,5 +75,11 @@
     <!--layout module-->
     <script src="src/layout/layout.module.js"></script>
     <script src="src/layout/navbar.directive.js"></script>
+
+    <!--patient module-->
+    <script src="src/patient/patient.module.js"></script>
+    <script src="src/patient/config.route.js"></script>
+    <script src="src/patient/patient.controller.js"></script>
+    <script src="src/patient/patient.service.js"></script>
 </body>
 </html>
